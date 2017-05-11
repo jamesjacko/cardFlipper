@@ -1,16 +1,25 @@
+body{
+	background: url("../images/footer_lodyas.png") repeat;
+}
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
+	position: relative;
+
+}
+.card{
+	width:680px;
+	margin:0 auto;
 }
 	/* flip the pane when hovered */
 	 .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
 
-.flip-container, .front, .back {
-	width: 320px;
+.flip-container, .front, .back, .card {
+	width: 680px;
 	height: 480px;
-
+	text-align: center;
 }
 
 /* flip speed goes here */
@@ -28,7 +37,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-  border:1px solid #ccc;
+	background: #FFF;
 }
 
 /* front pane, placed above back */
@@ -43,5 +52,15 @@
 	transform: rotateY(180deg);
 }
 .front img{
-  width:320px;
+  width:680px;
+}
+#loader{
+	width:682px;
+	height:482px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background: #FFF url("../images/loading.gif") no-repeat center;
+	background-size:50%;
+	display:none;
 }

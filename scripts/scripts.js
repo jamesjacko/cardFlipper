@@ -24,6 +24,7 @@ var answerStage = true;
 window.onload = function(){
   document.getElementById("flip-container").addEventListener("transitionend", function(){
     if(answerStage){
+      document.getElementById("loader").style.display = "none";
       loadQuestion();
     }
   })
@@ -34,6 +35,7 @@ window.onload = function(){
   document.getElementById("continue").addEventListener("click", function(e){
     e.preventDefault();
     answerStage = true;
+    document.getElementById("loader").style.display = "block";
     document.getElementById("flip-container").classList.remove("hover");
   });
   loadQuestion();
